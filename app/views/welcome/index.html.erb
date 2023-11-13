@@ -10,7 +10,7 @@
       <%= project.name %>
       <ul>
       <% project.issues.each do |issue| %>
-        <li><%= issue.subject %></li>
+        <li><%= link_to issue.subject, issue_path(issue) %></li>
         <li><%= issue.assigned_to %></li>
         <li><%= issue.created_on %></li>
       <% end %>
